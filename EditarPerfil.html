@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>GetJobs</title>
+    <link rel="stylesheet" href="css/EditarPerfil.css">
+    <link rel="stylesheet" href="css/Bootstrap.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgb(255, 255, 255)">
+        <a class="navbar-brand">
+            <img class="perfil" src="img/ellipse_7.png" alt="foto do perfil"></a>
+        <label class="editarLabel" for="nome">Editar</label>
+        <input class="editarImagem" type="image" src="img/84380_2.png" border="0" alt="Submit" />
+        <a class="btnSair" href="#">Sair</a>
+    </nav>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="containerr">
+            <form class="col-md-8 col-xl-6">
+                <div class="row">
+                    <fieldset class="col-lg-11">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" required>
+                            <a class="editar1" href="#">Editar</a>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="usuario" name="usuario"
+                                placeholder="Nome de Usuário" required>
+                            <a class="editar2" href="#">Editar</a>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" maxlength="10" id="nascimento" name="nascimento"
+                                placeholder="Data de Nascimento" required>
+                            <a class="editar3" href="#">Editar</a>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="email" name="email" placeholder="Email"
+                                required>
+                            <a class="editar4" href="#">Editar</a>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Endereço"
+                                required>
+                            <a class="editar5" href="#">Editar</a>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="descricao" name="Descricao"
+                                placeholder="Descrição" required>
+                            <a class="editar6" href="#">Editar</a>
+                        </div>
+                    </fieldset>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="containerrExcluir">
+            <form>
+                <button class="btndeletarConta" type="submit"><span class="labelDeletar">Deletar Conta</span></button>
+            </form>
+            <form>
+                <button class="btnAtualizar" type="submit"><span class="labelAtualizar">Atualizar</span></button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
