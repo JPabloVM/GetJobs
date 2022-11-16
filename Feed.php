@@ -1,7 +1,7 @@
 <?php
 $c = $_GET['cargo'];
 include("conexao.php");
-$sql_code = "SELECT * FROM Usuario as U INNER JOIN Habilidades as H on U.id_usuario = H.id_usuario where H.cargo = '$c'";
+$sql_code = "SELECT * FROM Usuario as U where U.cargo = '$c'";
 $sql_query = $mysqli->query($sql_code) or die($mysqli->error);
 ?>
 <!DOCTYPE html>
@@ -31,21 +31,20 @@ $sql_query = $mysqli->query($sql_code) or die($mysqli->error);
         <!--fim do Logo e topo da Pagina-->
         <div class="container">
             <?php if ($sql_query->num_rows > 0): ?>
-            <?php while ($usuario = $sql_query->fetch_assoc()): ?>
-            <ul class="collection">
-                <li class="collection-item avatar">
-                    <img src="<?= $usuario['ftPerfil'] ?>" alt="usuario" class="circle">
-                    <span class="title">
-                        <?= $usuario['nmUsuario'] ?>
-                    </span>
-                    <p>
-                        <?= $usuario['descricao'] ?>
-                    </p>
-                    <a href="Perfil.php?id=<?= $usuario['id_usuario'] ?>" class="secundary-content"><i
-                            class="arrow_forward">perfil</i></a>
-                </li>
-            </ul>
-            <?php endwhile ?>
+                <?php while ($usuario = $sql_query->fetch_assoc()): ?>
+                    <ul class="collection">
+                        <li class="collection-item avatar">
+                            <img src="<?= $usuario['ftPerfil'] ?>" alt="usuario" class="circle">
+                            <span class="title">
+                                <?= $usuario['nmUsuario'] ?>
+                            </span>
+                            <p>
+                                <?= $usuario['descricao'] ?>
+                            </p>
+                            <a href="Perfil.php?id=<?= $usuario['id_usuario'] ?>" class="secundary-content"><i class="arrow_forward">perfil</i></a>
+                        </li>
+                    </ul>
+                <?php endwhile ?>
             <?php endif ?>
         </div>
 

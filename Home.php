@@ -29,7 +29,9 @@
                         <div class="col s4">
                             <div class="card">
                                 <div class="card-image">
-                                    <img src="img/rectangle_31.png" alt="Limpeza" />
+                                    <a href="Feed.php?cargo=Limpeza" class="black-text" name="Limpeza">
+                                        <img src="img/rectangle_31.png" alt="Limpeza" />
+                                    </a>
                                 </div>
                                 <div class="card-action">
                                     <a href="Feed.php?cargo=Limpeza" class="black-text" name="Limpeza">Limpeza</a>
@@ -41,7 +43,9 @@
                         <div class="col s4">
                             <div class="card">
                                 <div class="card-image">
-                                    <img src="img/rectangle_32.png" alt="Obra" />
+                                    <a href="Feed.php?cargo=Obra" class="black-text" name="Obra">
+                                        <img src="img/rectangle_32.png" alt="Obra" />
+                                    </a>
                                 </div>
                                 <div class="card-action">
                                     <a href="Feed.php?cargo=Obra" class="black-text" name="Obra">Obra</a>
@@ -53,11 +57,12 @@
                         <div class="col s4">
                             <div class="card">
                                 <div class="card-image">
-                                    <img src="img/rectangle_33.jpg" alt="Arquitetura" />
+                                    <a href="Feed.php?cargo=Arquitetura" class="black-text">
+                                        <img src="img/rectangle_33.jpg" alt="Arquitetura" />
+                                    </a>
                                 </div>
                                 <div class="card-action">
-                                    <a href="Feed.php?cargo=Arquitetura" class="black-text"
-                                        name="Arquitetura">Arquitetura</a>
+                                    <a href="Feed.php?cargo=Arquitetura" class="black-text">Arquitetura</a>
                                 </div>
                             </div>
                         </div>
@@ -71,10 +76,12 @@
                         <div class="col s4">
                             <div class="card">
                                 <div class="card-image">
-                                    <img src="img/rectangle_34.png" alt="designer" />
+                                    <a href="Feed.php?cargo=Designer" class="black-text" >
+                                        <img src="img/rectangle_34.png" alt="designer" />
+                                    </a>
                                 </div>
                                 <div class="card-action">
-                                    <a href="Feed.php?cargo=Designer" class="black-text" name="Designer">Designer</a>
+                                    <a href="Feed.php?cargo=Designer" class="black-text" >Designer</a>
                                 </div>
                             </div>
                         </div>
@@ -83,11 +90,12 @@
                         <div class="col s4">
                             <div class="card">
                                 <div class="card-image">
-                                    <img src="img/rectangle_35.png" alt="Desenvolvedor" />
+                                    <a href="Feed.php?cargo=Desenvolvedor" class="black-text" >
+                                        <img src="img/rectangle_35.png" alt="Desenvolvedor" />
+                                    </a>
                                 </div>
                                 <div class="card-action">
-                                    <a href="Feed.php?cargo=Desenvolvedor" class="black-text"
-                                        name="Desenvolvedor">Dev</a>
+                                    <a href="Feed.php?cargo=Desenvolvedor" class="black-text" >Dev</a>
                                 </div>
                             </div>
                         </div>
@@ -96,7 +104,9 @@
                         <div class="col s4">
                             <div class="card">
                                 <div class="card-image">
-                                    <img src="img/rectangle_36.png" alt="Analista" />
+                                    <a href="Feed.php?cargo=Analista" class="black-text">
+                                        <img src="img/rectangle_36.png" alt="Analista" />
+                                    </a>
                                 </div>
                                 <div class="card-action">
                                     <a href="Feed.php?cargo=Analista" class="black-text">Analista</a>

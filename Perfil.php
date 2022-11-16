@@ -3,9 +3,7 @@
 include("conexao.php");
 (isset($_GET['id'])) ? $id_usuario = $_GET['id'] : null;
 $sql_code = "SELECT * FROM Usuario where id_usuario = $id_usuario ";
-$sql_code2 = "SELECT * FROM Habilidades where id_usuario = $id_usuario ";
 $sql_query = $mysqli->query($sql_code) or die($mysqli->error);
-$sql_query2 = $mysqli->query($sql_code2) or die($mysqli->error);
 ?>
 
 
@@ -46,11 +44,9 @@ $sql_query2 = $mysqli->query($sql_code2) or die($mysqli->error);
                 <h1>
                     <?= $usuario['nmUsuario'] ?>
                 </h1>
-                <?php while ($habilidades = $sql_query2->fetch_assoc()): ?>
                 <h2>
-                    <?= $habilidades['cargo'] ?>
+                    <?= $usuario['cargo'] ?>
                 </h2>
-                <?php endwhile ?>
             </div>
         </header>
         <aside class="sidebar">
