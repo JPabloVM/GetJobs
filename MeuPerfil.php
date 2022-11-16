@@ -26,7 +26,7 @@ $sql_query = $mysqli->query($sql_code) or die($mysqli->error);
             <span>Fechar</span>
         </div>
 
-        <?php while ($usuario = $usuarios->fetchArray()) : ?>
+        <?php while ($usuario = $sql_query->fetch_assoc()): ?>
             <header>
                 <div class="img-wrapper">
                     <img src="img/perfil/bg.jpg" alt="foto de capa">
