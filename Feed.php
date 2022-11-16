@@ -33,7 +33,7 @@
                                 <p>
                                     <?= $usuario['descricao']?>
                                 </p>
-                                <a href="Perfil.html?id=<?= $usuario['id_usuario']?>" class="secundary-content"><i class="arrow_forward">perfil</i></a>
+                                <a href="Perfil.php?id=<?= $usuario['id_usuario']?>" class="secundary-content"><i class="arrow_forward">perfil</i></a>
                             </li>
                         </ul>
                     <?php endwhile ?>
@@ -53,7 +53,7 @@
                     </a>
                 </div>
                 <div class="col s6 blue-grey lighten-2">
-                    <a href="#" class="center-align">
+                    <a href="MeuPerfil.php" class="center-align">
                         <img src="img/person_fill0_wght400_grad0_opsz48_1.png" alt="perfil">
                     </a>
                 </div>
