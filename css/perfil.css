@@ -139,7 +139,7 @@ header {
     width: 20vh;
     min-height: 90px;
     height: 20vh;
-    border-radius: 10rem;
+    border-radius: 100rem;
     top: 4%;
     background-color: var(--color-primary);
     position: absolute;
@@ -150,6 +150,7 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 100rem;
 }
 
 .perfil h1 {
