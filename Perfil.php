@@ -22,7 +22,7 @@ $sql_query2 = $mysqli->query($sql_code2) or die($mysqli->error);
 
 <body>
     <div class="container">
-        
+
         <?php while ($usuario = $sql_query->fetch_assoc()): ?>
         <div class="hamburguer">
             <div class="line" id="line1"></div>
@@ -40,11 +40,11 @@ $sql_query2 = $mysqli->query($sql_code2) or die($mysqli->error);
                 <h1>
                     <?= $usuario['nmUsuario'] ?>
                 </h1>
-                <?php while($habilidades = $sql_query2->fetch_assoc()): ?>
-                    <h2>
-                        <?= $habilidades['cargo'] ?>
-                    </h2>
-                    <?php endwhile ?>
+                <?php while ($habilidades = $sql_query2->fetch_assoc()): ?>
+                <h2>
+                    <?= $habilidades['cargo'] ?>
+                </h2>
+                <?php endwhile ?>
             </div>
         </header>
         <aside class="sidebar">
@@ -58,13 +58,13 @@ $sql_query2 = $mysqli->query($sql_code2) or die($mysqli->error);
         </aside>
         <!-- Inicio da descricao-->
         <div class="descricao">
-            
+
             <textarea disabled name="descricao">
             <?= $usuario['descricao'] ?>
 
             </textarea>
-            
-            
+
+
         </div>
         <!-- Fim da descricao-->
         <!-- Inicio do botão para solicitar-job-->
@@ -73,9 +73,9 @@ $sql_query2 = $mysqli->query($sql_code2) or die($mysqli->error);
         </div>
         <!-- Fim do botão para solicitar-job-->
         <?php endwhile ?>
-        
+
     </div>
 </body>
-<script src="js/script.js"></script>
+<script language="javascript" type="text/javascript" src="js/script.js"></script>
 
 </html>
