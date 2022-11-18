@@ -29,6 +29,25 @@ $sql_query = $mysqli->query($sql_code) or die($mysqli->error);
 
 <body>
     <div class="container">
+        <!--Inicio do menu hamburguer-->
+        <div class="hamburguer">
+            <div class="line" id="line1"></div>
+            <div class="line" id="line2"></div>
+            <div class="line" id="line3"></div>
+            <span>Fechar</span>
+        </div>
+        <!--Fim do menu hamburguer-->
+
+        <!--Inicio do sidebar do projeto, onde incluo os links que direcionam o usuário para outras páginas do projeto-->
+        <aside class="sidebar">
+            <nav>
+                <ul class="menu">
+                    <li class="menu-item"><a href="Home.php" class="menu-link">Home</a></li>
+                    <li class="menu-item"><a href="MeuPerfil.php" class="menu-link">Meu Perfil</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <!--Fim do sidebar-->
 
         <!--Inicio do header-->
         <div class="sessao-header">
@@ -51,26 +70,6 @@ $sql_query = $mysqli->query($sql_code) or die($mysqli->error);
             </div>
         </div>
         <!--Fim do header-->
-
-        <!--Inicio do menu hamburguer-->
-        <div class="hamburguer">
-            <div class="line" id="line1"></div>
-            <div class="line" id="line2"></div>
-            <div class="line" id="line3"></div>
-            <span>Fechar</span>
-        </div>
-        <!--Fim do menu hamburguer-->
-
-        <!--Inicio do sidebar do projeto, onde incluo os links que direcionam o usuário para outras páginas do projeto-->
-        <aside class="sidebar">
-            <nav>
-                <ul class="menu">
-                    <li class="menu-item"><a href="Home.php" class="menu-link">Home</a></li>
-                    <li class="menu-item"><a href="MeuPerfil.php" class="menu-link">Meu Perfil</a></li>
-                </ul>
-            </nav>
-        </aside>
-        <!--Fim do sidebar-->
 
         <!-- Inicio da descricao-->
         <div class="descricao">
@@ -107,10 +106,10 @@ $sql_query = $mysqli->query($sql_code) or die($mysqli->error);
         <!-- Fim do botão para solicitar-job-->
         <?php endwhile ?>
 
-        <script language="javascript" type="text/javascript" src="js/script.js" defer></script>
     </div>
-
+    
 </body>
 <!--Chamo o script da pasta js para executar o menu hamburguer-->
+<script language="javascript" type="text/javascript" src="js/script.js" defer></script>
 
 </html>

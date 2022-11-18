@@ -17,11 +17,34 @@ $sql_query = $mysqli->query($sql_code) or die($mysqli->error);
     <link rel="manifest" href="favicon/site.webmanifest">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/menu.css">
     <title>GetJobs</title>
 </head>
 <main>
 
     <body>
+
+        <div class="container">
+            <!--Inicio do menu hamburguer-->
+            <div class="hamburguer">
+                <div class="line" id="line1"></div>
+                <div class="line" id="line2"></div>
+                <div class="line" id="line3"></div>
+                <span>Fechar</span>
+            </div>
+            <!--Fim do menu hamburguer-->
+
+            <!--Inicio do sidebar do projeto, onde incluo os links que direcionam o usuário para outras páginas do projeto-->
+            <aside class="sidebar">
+                <nav>
+                    <ul class="menu">
+                        <li class="menu-item"><a href="Home.php" class="menu-link">Home</a></li>
+                        <li class="menu-item"><a href="MeuPerfil.php" class="menu-link">Meu Perfil</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <!--Fim do sidebar-->
+        </div>
         <!--Logo e topo da Pagina-->
         <nav>
             <div class="nav-wrapper blue darken-3">
@@ -30,21 +53,23 @@ $sql_query = $mysqli->query($sql_code) or die($mysqli->error);
         </nav>
         <!--fim do Logo e topo da Pagina-->
         <div class="container">
+
             <?php if ($sql_query->num_rows > 0): ?>
-                <?php while ($usuario = $sql_query->fetch_assoc()): ?>
-                    <ul class="collection">
-                        <li class="collection-item avatar">
-                            <img src="<?= $usuario['ftPerfil'] ?>" alt="usuario" class="circle">
-                            <span class="title">
-                                <?= $usuario['nmUsuario'] ?>
-                            </span>
-                            <p>
-                                <?= $usuario['descricao'] ?>
-                            </p>
-                            <a href="Perfil.php?id=<?= $usuario['id_usuario'] ?>" class="secundary-content"><i class="arrow_forward">perfil</i></a>
-                        </li>
-                    </ul>
-                <?php endwhile ?>
+            <?php while ($usuario = $sql_query->fetch_assoc()): ?>
+            <ul class="collection">
+                <li class="collection-item avatar">
+                    <img src="<?= $usuario['ftPerfil'] ?>" alt="usuario" class="circle">
+                    <span class="title">
+                        <?= $usuario['nmUsuario'] ?>
+                    </span>
+                    <p>
+                        <?= $usuario['descricao'] ?>
+                    </p>
+                    <a href="Perfil.php?id=<?= $usuario['id_usuario'] ?>" class="secundary-content"><i
+                            class="arrow_forward">perfil</i></a>
+                </li>
+            </ul>
+            <?php endwhile ?>
             <?php endif ?>
         </div>
 
@@ -54,6 +79,7 @@ $sql_query = $mysqli->query($sql_code) or die($mysqli->error);
 
 <footer class="page-footer blue-grey lighten-4">
     <div class="container">
+
         <div class="row">
             <div class="col s6 blue darken-3">
                 <a href="Home.php" class="rigth-align">
@@ -67,6 +93,7 @@ $sql_query = $mysqli->query($sql_code) or die($mysqli->error);
             </div>
         </div>
     </div>
+    <script language="javascript" type="text/javascript" src="js/script.js" defer></script>
 </footer>
 
 </html>
