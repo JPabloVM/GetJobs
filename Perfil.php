@@ -19,6 +19,7 @@ $sql_query = $mysqli->query($sql_code) or die($mysqli->error);
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
     <link rel="stylesheet" href="css/perfil.css">
+    <link rel="stylesheet" href="css/menu.css">
     <?php while ($usuario = $sql_query->fetch_assoc()): ?>
     <!--Defino que o titulo da página será o nome do usuário-->
     <title>
@@ -106,10 +107,10 @@ $sql_query = $mysqli->query($sql_code) or die($mysqli->error);
         <!-- Fim do botão para solicitar-job-->
         <?php endwhile ?>
 
+        <script language="javascript" type="text/javascript" src="js/script.js" defer></script>
     </div>
 
 </body>
 <!--Chamo o script da pasta js para executar o menu hamburguer-->
-<script language="javascript" type="text/javascript" src="js/script.js" defer></script>
 
 </html>
