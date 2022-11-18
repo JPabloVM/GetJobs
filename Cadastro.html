@@ -30,48 +30,53 @@
                   </div>
                   
                   <div class="form-outline mb-4">
-                    <input name="cpf" type="text" id="form3Example1q" class="form-control" />
+                    <input name="cpf" type="number" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" \ id="form3Example1q" class="form-control" placeholder="111.111.111-00" />
                     <label class="form-label" for="form3Example1q">CPF</label>
                   </div>
                   
                   <div class="form-outline mb-4">
-                    <input name="DDD" type="text" id="form3Example1q" class="form-control" />
+                    <input name="DDD" type="number" id="form3Example1q" class="form-control" placeholder="11" />
                     <label class="form-label" for="form3Example1q">DDD</label>
                   </div>
 
                   <div class="form-outline mb-4">
-                    <input name="Telefone" type="text" id="form3Example1q" class="form-control" />
+                    <input name="Telefone" type="number" id="form3Example1q" class="form-control" placeholder="(11) 91111-1111" />
                     <label class="form-label" for="form3Example1q">Telefone</label>
                   </div>
                   
                   <div class="form-outline mb-4">
-                        <input name="DatadeNascimento" type="text" id="form3Example1q" class="form-control" />
+                        <input name="DatadeNascimento" type="date" id="form3Example1q" class="form-control" />
                         <label class="form-label" for="form3Example1q">Data de Nascimento</label>
                       </div>
       
                       <div class="form-outline mb-4">
-                        <input name="Email" type="text" id="form3Example1q" class="form-control" />
+                        <input name="Email" type="email" id="form3Example1q" class="form-control" placeholder="email@exemplo.com" />
                         <label class="form-label" for="form3Example1q">Email</label>
                       </div>
                       
                       <div class="form-outline mb-4">
-                        <input name="Endereco" type="text" id="form3Example1q" class="form-control" />
+                        <input name="Cep" type="number" id="form3Example1q" class="form-control" placeholder="00000-000" />
+                        <label class="form-label" for="form3Example1q">CEP</label>
+                      </div>
+                      
+                      <div class="form-outline mb-4">
+                        <input name="Endereco" type="text" id="form3Example1q" class="form-control" placeholder="Rua Capial" />
                         <label class="form-label" for="form3Example1q">Endereço</label>
                       </div>
 
-                        <div class="form-outline mb-4">
-                          <input name="Cep" type="text" id="form3Example1q" class="form-control" />
-                          <label class="form-label" for="form3Example1q">CEP</label>
-                        </div>
                         
                         <div class="form-outline mb-4">
-                          <input name="Numero" type="text" id="form3Example1q" class="form-control" />
+                          <input name="Numero" type="number" id="form3Example1q" class="form-control" placeholder="00"/>
                           <label class="form-label" for="form3Example1q">Número</label>
                         </div>
                         
                         <div class="form-outline mb-4">
-                          <input name="Descricao" type="text" id="form3Example1q" class="form-control" />
                           <label class="form-label" for="form3Example1q">Descrição</label>
+                          <br>
+                          <textarea id="form3Example1q" name="Descricao" rows="5" cols="33">
+Insira sua descrição...
+                          </textarea>
+                          
                         </div>
 
                         <div class="form-outline mb-4">
@@ -80,7 +85,7 @@
                         </div>
                         
                         <div class="form-outline mb-4">
-                          <input name="Senha" type="text" id="form3Example1q" class="form-control" />
+                          <input name="Senha" type="password" id="form3Example1q" class="form-control" />
                           <label class="form-label" for="form3Example1q">Senha</label>
                         </div>
                         
@@ -93,13 +98,13 @@
                         <br>
                         <div class="input-field col s12">
                           <select>
-                            <option value="" disabled selected>Escolha seu Cargo</option>
+                            <option value="" disabled selected>Escolha sua área</option>
                             <option value="1">Limpeza</option>
-                            <option value="2">Obra</option>
+                            <option value="2">Obras</option>
                             <option value="3">Arquitetura</option>
-                            <option value="4">Designer</option>
-                            <option value="5">Desenvolvedor</option>
-                            <option value="6">Analista</option>
+                            <option value="4">Design</option>
+                            <option value="5">Desenvolvimento</option>
+                            <option value="6">Análise</option>
                           </select>
                         </div>
                         <br>
