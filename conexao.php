@@ -3,7 +3,7 @@
 $hostname = "localhost";
 $bancodedados = "getjobs";
 $usuario = "root";
-$senha = "Ndantas11!";
+$senha = "";
 //conecta com o banco
 $mysqli = new mysqli($hostname, $usuario, $senha, $bancodedados);
 //Verifica conexão 
