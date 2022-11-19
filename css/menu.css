@@ -1,0 +1,97 @@
+:root {
+    --font-primary: "Inter", serif;
+    --color-primary: rgba(183.00000429153442, 207.00000286102295, 255, 1);
+    --color-secundary: rgba(0, 74.0000031888485, 173.00000488758087, 1);
+}
+
+.hamburguer {
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    z-index: 100;
+    right: 2rem;
+    top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.show-menu .hamburguer {
+    right: 16rem;
+}
+
+.line {
+    width: 100%;
+    height: .1rem;
+    background-color: #fff;
+    box-shadow: 0.1rem 0.1rem 1px #000;
+}
+
+.hamburguer span {
+    position: absolute;
+    left: 3rem;
+    height: 2rem;
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-primary);
+    color: #363636;
+    font-family: var(--font-primary);
+    opacity: 0;
+
+}
+
+.hamburguer span::before {
+    content: "";
+    position: absolute;
+    border-right: .5rem solid var(--color-primary);
+    border-top: .5rem solid transparent;
+    border-left: .5rem solid transparent;
+    border-bottom: .5rem solid transparent;
+    left: -1rem;
+}
+
+.show-menu .hamburguer:hover span {
+    opacity: 1;
+}
+
+.sidebar {
+    width: 20rem;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: -20rem;
+    transition: all 1s;
+    z-index: 3;
+}
+
+.show-menu .sidebar {
+    right: 0;
+}
+
+.menu {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu-item {
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
+.menu-link {
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    color: #555;
+    transition: color 1s;
+}
+
+.menu-link:hover {
+    color: var(--color-primary);
+}

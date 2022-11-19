@@ -1,6 +1,6 @@
 <?php 
 
-$bd = new SQLite3("PI.sql");
+$bd = new SQLite3("PI2.sql");
 
 $sql = "DROP TABLE IF EXISTS Usuario";
 
