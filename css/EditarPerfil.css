@@ -1,243 +1,162 @@
-.perfil {
-	border-radius: 500px;
-	width: 130px;
-	height: 137px;
-	position: absolute;
-	left: 570px;
-	top: 30px;
-	background-repeat: no-repeat;
-	background-size: cover;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css");
+
+.fotoPerfil {
+    box-shadow: 0px 4px 20px rgba(100.9375025331974, 100.9375025331974, 100.9375025331974, 0.15000000596046448);
+    border-radius: 500px;
+    width: 140px;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#main-container img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.navbar-brand {
-	width: 130px;
-	height: 180px;
+#main-container h3 {
+    text-align: right;
+    margin-bottom: -10px;
+    font-size: 1.4rem;
+    color: rgb(241, 14, 14);
+  text-decoration: underline;
 }
-
+#main-container h3:hover{
+color: blue;
+}
 .editarImagem {
-	width: 21px;
-	height: 20px;
-	position: absolute;
-	left: 650px;
-	top: 170px;
+height: 1.5rem;
+margin-top: 12px;
 }
 
 .editarLabel {
-	width: 21px;
-	height: 20px;
-	position: absolute;
-	left: 600px;
-	top: 170px;
+    color: rgb(13, 13, 14);
+    width: 45px;
+    height: 19px;
+    position: absolute;
+    left: 48%;
+    top: 160px;
+    font-family: Inter;
+    text-align: right;
+    font-size: 16px;
+    letter-spacing: 0;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Inter;
+    color: #323232;
+    border: none;
+}
+input,label{
+    display: block;
+    width: 100%;
+}
+input:focus,label:focus{
+    outline: none;
+}
+a{
+    color: blue;
+}
+body{
+    padding-top: 5vh;
+    background-image: url("../img/fundo.jpg");
+    background-size: cover; 
 }
 
-.btnSair {
-	color: rgba(255, 0, 0, 1);
-	width: 30px;
-	height: 19px;
-	position: absolute;
-	left: 900px;
-	top: 25px;
-	font-family: Inter;
-	text-align: right;
-	font-size: 20px;
-	letter-spacing: 0;
+#main-container{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 25px;
+}
+.full-box img{
+    text-align: center;
+}
+#main-container h1{
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+}
+form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.full-box{
+    flex: 1 1 100%;
+    position: relative;
+}
+.full-box textarea{
+    border-bottom: 2px solid #323232;
+    border-top:2px solid #323232 ;
+    border-left: 2px solid #323232;
+    border-right: 2px solid #323232;
+}
+.hal-box{
+    flex: 1 1 45%;
+    position: relative;
+}
+.spacing{
+    margin-right: 2.5%;
+}
+label{
+    font-weight: bold;
+    font-size: .8rem;
+}
+input{
+    border-bottom: 2px solid #323232;
+    padding: 10px;
+    font-size: .9rem;
+    margin-bottom: 40px;
+}
+input:focus{
+    border-color: blue;
+} 
+input.deletar{
+    border-bottom: none;
+    background-color: rgb(224, 31, 31);
+    width: 343px;
+    height: 51px;
+    margin-top: 10px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}  
+input.atualizar{
+    border-bottom: none;
+    background-color: rgba(0, 74.0000031888485, 173.00000488758087, 1);
+    width: 343px;
+    height: 51px;
+    margin-top: -30px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+input[type="submit"]{
+    color: #FFF;
+    cursor: pointer;
 }
 
-.col-lg-11 {
-	top: 140px;
-	left: 350px;
+/*Validações*/
+.error-validation{
+    color: #FF1A1A;
+    position: absolute;
+    top: 57px;
+    font-size: .8rem;
 }
-
-.btndeletarConta {
-	background-color: rgba(255, 0, 0, 1);
-	width: 343px;
-	height: 51px;
-	position: absolute;
-	left: 500px;
-	top: 530px;
-	border-top-left-radius: 100px;
-	border-top-right-radius: 100px;
-	border-bottom-left-radius: 100px;
-	border-bottom-right-radius: 100px;
-}
-
-.labelDeletar {
-	color: rgba(255, 255, 255, 1);
-	width: 107px;
-	height: 19px;
-	position: absolute;
-	left: 118px;
-	top: 15px;
-	font-family: Inter;
-	text-align: center;
-	font-size: 16px;
-	letter-spacing: 0;
-
-}
-
-.btnAtualizar {
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-	background-color: rgba(0, 74.0000031888485, 173.00000488758087, 1);
-	width: 343px;
-	height: 51px;
-	position: absolute;
-	left: 500px;
-	top: 600px;
-	border-top-left-radius: 100px;
-	border-top-right-radius: 100px;
-	border-bottom-left-radius: 100px;
-	border-bottom-right-radius: 100px;
-}
-
-.labelAtualizar {
-	color: rgba(255, 255, 255, 1);
-	width: 69px;
-	height: 19px;
-	position: absolute;
-	left: 137px;
-	top: 16px;
-	font-family: Inter;
-	text-align: center;
-	font-size: 16px;
-	letter-spacing: 0;
-}
-
-.e225_2269 {
-	color: rgba(0, 74.0000031888485, 173.00000488758087, 1);
-	width: 45px;
-	height: 19px;
-	position: absolute;
-	left: 297px;
-	top: 329px;
-	font-family: Inter;
-	text-align: right;
-	font-size: 16px;
-	letter-spacing: 0;
-}
-
-.editar1 {
-	color: rgba(0, 74.0000031888485, 173.00000488758087, 1);
-	width: 45px;
-	height: 19px;
-	position: absolute;
-	left: 550px;
-	top: 10px;
-	font-family: Inter;
-	text-align: right;
-	font-size: 16px;
-	letter-spacing: 0;
-}
-
-.editar2 {
-	color: rgba(0, 74.0000031888485, 173.00000488758087, 1);
-	width: 45px;
-	height: 19px;
-	position: absolute;
-	left: 550px;
-	top: 60px;
-	font-family: Inter;
-	text-align: right;
-	font-size: 16px;
-	letter-spacing: 0;
-}
-
-.editar3 {
-	color: rgba(0, 74.0000031888485, 173.00000488758087, 1);
-	width: 45px;
-	height: 19px;
-	position: absolute;
-	left: 550px;
-	top: 115px;
-	font-family: Inter;
-	text-align: right;
-	font-size: 16px;
-	letter-spacing: 0;
-}
-
-.editar4 {
-	color: rgba(0, 74.0000031888485, 173.00000488758087, 1);
-	width: 45px;
-	height: 19px;
-	position: absolute;
-	left: 550px;
-	top: 170px;
-	font-family: Inter;
-	text-align: right;
-	font-size: 16px;
-	letter-spacing: 0;
-}
-
-.editar5 {
-	color: rgba(0, 74.0000031888485, 173.00000488758087, 1);
-	width: 45px;
-	height: 19px;
-	position: absolute;
-	left: 550px;
-	top: 225px;
-	font-family: Inter;
-	text-align: right;
-	font-size: 16px;
-	letter-spacing: 0;
-}
-
-.editar6 {
-	color: rgba(0, 74.0000031888485, 173.00000488758087, 1);
-	width: 45px;
-	height: 19px;
-	position: absolute;
-	left: 550px;
-	top: 275px;
-	font-family: Inter;
-	text-align: right;
-	font-size: 16px;
-	letter-spacing: 0;
-}
-
-@media (min-width: 576px) {
-	.col-lg-11 {
-		min-width: 540px;
-	}
-}
-
-@media (min-width: 768px) {
-	.col-lg-11 {
-		max-width: 720px;
-	}
-}
-
-@media (min-width: 992px) {
-	.col-lg-11 {
-		max-width: 960px;
-	}
-}
-
-@media (min-width: 1200px) {
-	.col-lg-11 {
-		max-width: 1140px;
-	}
-}
-
-
-@media (min-width: 576px) {
-	.col-lg-11 {
-		max-width: 540px;
-	}
-}
-
-@media (min-width: 768px) {
-	.col-lg-11 {
-		max-width: 720px;
-	}
-}
-
-@media (min-width: 992px) {
-	.col-lg-11 {
-		max-width: 960px;
-	}
-}
-
-@media (min-width: 1200px) {
-	.col-lg-11 {
-		max-width: 1140px;
-	}
+.template{
+    display:none;
 }

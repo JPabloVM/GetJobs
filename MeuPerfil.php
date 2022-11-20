@@ -32,7 +32,7 @@ $sql_query = $mysqli->query($sql_code) or die($mysqli->error);
                     <img src="img/perfil/bg.jpg" alt="foto de capa">
                 </div>
                 <div class="editar-perfil">
-                    <li><a class="waves-effect waves-light btn" href="EditarPerfil.html">Editar Perfil</a></li>
+                    <li><a class="waves-effect waves-light btn" href="EditarPerfil.php">Editar Perfil</a></li>
                 </div>
 
                 <div class="perfil">
