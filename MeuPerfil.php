@@ -1,6 +1,7 @@
 <?php
+session_start();
 include("conexao.php");
-(isset($_GET['id'])) ? $id_usuario = $_GET['id'] : null;
+$id_usuario = $_SESSION['id_usuario'];
 $sql_code = "SELECT * FROM Usuario where id_usuario = $id_usuario ";
 $sql_query = $mysqli->query($sql_code) or die($mysqli->error);
 ?>
@@ -26,7 +27,7 @@ $sql_query = $mysqli->query($sql_code) or die($mysqli->error);
             <span>Fechar</span>
         </div>
 
-        <?php while ($usuario = $usuarios->fetchArray()) : ?>
+        <?php while ($usuario = $sql_query->fetch_assoc()) : ?>
             <header>
                 <div class="img-wrapper">
                     <img src="img/perfil/bg.jpg" alt="foto de capa">
