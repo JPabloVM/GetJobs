@@ -14,9 +14,12 @@ $Numero = mysqli_real_escape_string($mysqli, $_POST['Numero']);
 $Descricao = mysqli_real_escape_string($mysqli, $_POST['Descricao']);
 $Login = mysqli_real_escape_string($mysqli, $_POST['Login']);
 $Senha = mysqli_real_escape_string($mysqli, trim(md5($_POST['Senha'])));
+//$File = mysqli_real_escape_string($mysqli, ($_POST['File']));
+//$Cargo = mysqli_real_escape_string($mysqli, ($_POST['cargo']));
 
-$sql = "select count(*) as total from usuario where usuario = '$usuario'";
-$result = mysqli_query($mysqli, $sql);
+
+$sql = "select count(*) as total from Usuario where login = '$Login'";
+$result = $mysqli->query($sql);
 $row = mysqli_fetch_assoc($result);
 
 if($row['total'] == 1) {
@@ -25,17 +28,19 @@ if($row['total'] == 1) {
 	exit;
 }
 
-$sql = "INSERT INTO Usuario (nmUsuario, cpf, dtNascimento, email, endereco, numero, cep, login, senha, ftPerfil, descricao,cargo,ddd,telefone)
-        VALUES('$nome','$Cpf', '$DDD', '$Telefone', '$DatadeNascimento', '$Email', 
-        '$Endereco', '$Cep', '$Numero', '$Descricao', '$Login', '$Senha')";
+$sql = "INSERT INTO Usuario(nmUsuario, cpf, dtNascimento, email, endereco, numero, cep, login, senha, ftPerfil, descricao,cargo,ddd,telefone)
+        VALUES('$nome','$Cpf', '$DatadeNascimento', '$Email', '$Endereco', '$Numero', 
+        '$Cep', '$Login', '$Senha', 'img/user_standard.png', '$Descricao', 'Analista', '$DDD', '$Telefone')";
 
 if($mysqli->query($sql) === TRUE) {
 	$_SESSION['status_cadastro'] = true;
+	header('Location: Login.html');
+	exit;
+}else{
+	echo $mysqli->error;
 }
 
 $mysqli->close();
 
-header('Location: Login.html');
-exit;
 
 ?>
