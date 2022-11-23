@@ -34,6 +34,7 @@ CREATE TABLE Contratante (
     id_usuario int
 );
  
+ 
 ALTER TABLE Servico ADD CONSTRAINT FK_Servico_2
     FOREIGN KEY (id_contratante)
     REFERENCES Contratante (id_contratante);
@@ -47,6 +48,9 @@ ALTER TABLE Contratante ADD CONSTRAINT FK_Contratante_2
     REFERENCES Usuario (id_usuario);
     
 SELECT * FROM Usuario;
+SELECT * FROM Usuario as U where U.cargo = 'Designer';
+
+
 
 INSERT INTO Usuario (nmUsuario, cpf, dtNascimento, email, endereco, numero, cep, login, senha, ftPerfil, descricao,cargo,ddd,telefone) 
 		VALUES (
@@ -60,7 +64,7 @@ INSERT INTO Usuario (nmUsuario, cpf, dtNascimento, email, endereco, numero, cep,
 				'doug',
 				md5('19190'),
 				'https://akamai.sscdn.co/uploadfile/letras/fotos/e/f/d/9/efd9ba55e7245d54782ef93f9bdfe1a9.jpg',
-				'Olá meu nome é Douglas',
+				'Óla meu nome é Douglas',
                 'Designer',
                 '011',
                 '955554444'
@@ -80,9 +84,10 @@ INSERT INTO Usuario (nmUsuario, cpf, dtNascimento, email, endereco, numero, cep,
 				'Br',
 				md5('12345'),
 				'img/user_standard.png',
-				'Olá meu nome é Bruno',
+				'Óla meu nome é Bruno',
                 'Desenvolvedor',
 				'011',
                 '955554444'
         );
         
+select id_usuario,nmUsuario from usuario where login = 'Br' and senha = md5('12345');

@@ -113,8 +113,12 @@ $con = $mysqli->query($consulta) or die($mysqli->error);
             <div class="full-box">
                 <input class="atualizar" type="submit" name="update" id="update" value="Atualizar">
             </div>
-            <!--BOTÃO DE EDITAR-->
-            
+            <!--Botão deletar-->
+            <div class="full-box">
+                    <a href="Deletar.php">
+                        <input class="deletar" type="submit" id="btn-submit" value="Deletar Conta" name="Deletar">
+                    </a>    
+            </div>
         </form>
         <?php } ?>
         <script src="js/Editar.js" defer></script>

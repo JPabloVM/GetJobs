@@ -125,7 +125,9 @@ $con = $mysqli->query($consulta) or die($mysqli->error);
                 </div>
                 <!--Botão deletar-->
                 <div class="full-box">
-                    <input class="deletar" type="submit" id="btn-submit" value="Deletar Conta">
+                    <a href="Deletar.php">
+                        <input class="deletar" type="submit" id="btn-submit" value="Deletar Conta" name="Deletar">
+                    </a>    
                 </div>
             </form>
             <?php } ?>

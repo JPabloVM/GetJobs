@@ -23,9 +23,16 @@ $senha= $_POST['senha'];
 $sqlUpdate = "UPDATE Usuario SET nmUsuario='$nameUser',cpf='$cpf',dtNascimento='$datanasc',email='$email',endereco='$adress',numero='$num',cep='$cep',descricao='$descricao',cargo='$cargo',ddd='$ddd',telefone='$tel',login='$login',senha='$senha' WHERE id_usuario='$id_usuario'";
 
 $result = $mysqli->query($sqlUpdate);
-
-}
 header('Location: EditarPerfil.php');
+}else if(isset($_POST['Deletar'])){
+
+    $sqlUpdate = "DELETE from Usuario where id_usuario= $id_usuario";
+
+    $result = $mysqli->query($sqlUpdate);
+
+    session_destroy();
+    header("Location: Login.html");
+}
 
 
 ?>
