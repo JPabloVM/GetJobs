@@ -1,4 +1,41 @@
-class validator {
+'use strict'
+let photo = document.getElementById('imgPhoto');
+let file = document.getElementById('flImage');
+
+photo.addEventListener('click', () => {
+    file.click();
+});
+
+const input1 = document.querySelector('#nameUser');
+input1.disabled = true;
+const input2 = document.querySelector('#datanasc');
+input2.disabled = true;
+const input3 = document.querySelector('#cpf');
+input3.disabled = true
+const input4 = document.querySelector('#ddd');
+input4.disabled = true;
+const input5 = document.querySelector('#tel');
+input5.disabled = true;
+const input6 = document.querySelector('#cep');
+input6.disabled = true;
+const input7 = document.querySelector('#adress');
+input7.disabled = true;
+const input8 = document.querySelector('#num');
+input8.disabled = true;
+const input9 = document.querySelector('#descricao');
+input9.disabled = true;
+const input10 = document.querySelector('#email');
+input10.disabled = true;
+const input11 = document.querySelector('#cargo');
+input11.disabled = true;
+const input12 = document.querySelector('#login');
+input12.disabled = true;
+const input13 = document.querySelector('#senha');
+input13.disabled = true;
+
+
+//---------------------------------//
+/*class validator {
     constructor() {
         this.validations = [
             'data-min-length',
@@ -50,6 +87,4 @@ let validator = new validator();
 submit.addEventListener('click', function (e) {
     e.preventDefault();
     validator.validate(form);
-});
-
-
+});*/
