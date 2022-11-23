@@ -14,9 +14,13 @@ $Numero = mysqli_real_escape_string($mysqli, $_POST['Numero']);
 $Descricao = mysqli_real_escape_string($mysqli, $_POST['Descricao']);
 $Login = mysqli_real_escape_string($mysqli, $_POST['Login']);
 $Senha = mysqli_real_escape_string($mysqli, trim(md5($_POST['Senha'])));
-//$File = mysqli_real_escape_string($mysqli, ($_POST['File']));
-//$Cargo = mysqli_real_escape_string($mysqli, ($_POST['cargo']));
+$Cargo = mysqli_real_escape_string($mysqli, ($_POST['cargo']));
+$File = mysqli_real_escape_string($mysqli, ($_POST['ftPerfil']));
 
+$upload = salvarFtperfil($_FILES);
+if(gettype($upload) == "string"){
+	$File = $upload;
+}
 
 $sql = "select count(*) as total from Usuario where login = '$Login'";
 $result = $mysqli->query($sql);
@@ -30,7 +34,7 @@ if($row['total'] == 1) {
 
 $sql = "INSERT INTO Usuario(nmUsuario, cpf, dtNascimento, email, endereco, numero, cep, login, senha, ftPerfil, descricao,cargo,ddd,telefone)
         VALUES('$nome','$Cpf', '$DatadeNascimento', '$Email', '$Endereco', '$Numero', 
-        '$Cep', '$Login', '$Senha', 'img/user_standard.png', '$Descricao', 'Analista', '$DDD', '$Telefone')";
+        '$Cep', '$Login', '$Senha', '$File', '$Descricao', '$Cargo', '$DDD', '$Telefone')";
 
 if($mysqli->query($sql) === TRUE) {
 	$_SESSION['status_cadastro'] = true;
@@ -43,4 +47,15 @@ if($mysqli->query($sql) === TRUE) {
 $mysqli->close();
 
 
+function salvarFtperfil($file){
+	$fotoDir = "img/ftPerfil/";
+	$fotoPath = $fotoDir . basename($file["ftPerfil"]["name"]);
+	$fotoTmp = $file["ftPerfil"]["tmp_name"];
+	if(move_uploaded_file($fotoTmp, $fotoPath)){
+		return $fotoPath;
+	}else{
+		return false;
+	}
+}
 ?>
+

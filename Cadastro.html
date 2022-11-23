@@ -19,7 +19,7 @@
               <div class="card rounded-3">
                 <div class="card-body p-4 p-md-5">
                   <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Cadastro</h3>
-                  <form action="cadastrar.php" method="post">        
+                  <form action="cadastrar.php" method="post" enctype="multipart/form-data">        
                       <div class="form-outline mb-4">
                         <input name="nome" type="text" id="form3Example1q" class="form-control" />
                         <label class="form-label" for="form3Example1q">Nome</label>
@@ -86,7 +86,7 @@
                       </div>
                       
                       <div class="file-field input-field">
-                        <div class="btn">
+                        <div>
                           <span>Foto de Perfil</span>
                           <input name="ftPerfil" type="file">
                         </div>
@@ -95,12 +95,12 @@
                       <div class="input-field col s12">
                         <select name="cargo">
                           <option value="" disabled selected>Escolha sua área</option>
-                          <option value="1">Limpeza</option>
-                          <option value="2">Obras</option>
-                          <option value="3">Arquitetura</option>
-                          <option value="4">Design</option>
-                          <option value="5">Desenvolvimento</option>
-                          <option value="6">Análise</option>
+                          <option value="Limpeza">Limpeza</option>
+                          <option value="Obra" name="cargo">Obras</option>
+                          <option value="Arquitetura" name="cargo">Arquitetura</option>
+                          <option value="Designer" name="cargo">Design</option>
+                          <option value="Desenvolvedor" name="cargo">Desenvolvimento</option>
+                          <option value="Analista" name="cargo">Analista</option>
                         </select>
                       </div>
                       <br>
