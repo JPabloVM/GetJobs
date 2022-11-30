@@ -122,6 +122,7 @@ $con = $mysqli->query($consulta) or die($mysqli->error);
         </form>
         <?php } ?>
         <script src="js/Editar.js" defer></script>
+        <script src="js/EditarPerfil.js" defer></script>
 </body>
 
 </html>
